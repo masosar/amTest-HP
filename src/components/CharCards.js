@@ -8,8 +8,6 @@ import { UrlContext } from '../UrlContext';
 const CharCards = () => {
     
     const url = useContext(UrlContext);
-    console.log(url.theUrl);
-
     const { data: characters, isPending, error } = useFetch(url.theUrl);
 
     return (

@@ -1,21 +1,27 @@
 import React, { useContext } from "react";
 import { UrlContext } from "../UrlContext";
 
-// const filterBy = (url) => {
-//   let laylisturl = url;
-//   console.log(laylisturl);
-// }
+
 
 
 const LayoutList = ({ characters }) => {
   const url = useContext(UrlContext);
+
+  const filterBy = (num) => {
+    if(num===1){
+      url.setTheUrl("http://localhost:3030/hp-students")
+    }else if(num===2){
+      url.setTheUrl("http://localhost:3030/hp-staff")
+    }
+  }
+
   return (
     <div className="container">
       <div className="logohp"></div>
       <div className="filter">Selecciona tu filtro</div>
       <div id="buttoncontainer">
-          <button onClick={ url.setTheUrl("http://localhost:3030/hp-students") } type="button home-button" id="button1" >ESTUDIANTES</button>
-          <button onClick={ url.setTheUrl("http://localhost:3030/hp-staff") } type="button contact-button" id="button2">STAFF</button>
+        <button onClick={ () => filterBy(1) } type="button home-button" id="button1" >ESTUDIANTES</button>
+        <button onClick={ () => filterBy(2) } type="button home-button" id="button2" >STAFF</button>
       </div>
       <div className="row row-cols-2 row-cols-lg-2">
         {characters.map((character, index) => (
