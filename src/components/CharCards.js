@@ -1,17 +1,29 @@
+import React, { useContext } from 'react';
 import '../sass/styles.scss';
-import StudentsList from './StudentsList';
+//import DdFavorites from './DdFavorites';
+import LayoutList from './LayoutList';
 import useFetch from './useFetch';
-
+import { UrlContext } from '../UrlContext';
 
 const CharCards = () => {
-    const { data: students, isPending, error } = useFetch('http://localhost:3030/hp-students');
+    
+    const url = useContext(UrlContext);
+    console.log(url.theUrl);
+
+    const { data: characters, isPending, error } = useFetch(url.theUrl);
 
     return (
         <div>
+           
+            <div id="cssmenu">
+                <div className="favorites">FAVORITOS</div>
+                <div className="add">AGREGAR</div>
+            </div>
+            {/* <DdFavorites /> */}
             <div className="hero">
                 { error && <div>{ error }</div> }
                 { isPending && <div>Loading...</div> }
-                {students && <StudentsList students = {students} />}
+                {characters && <LayoutList characters = {characters} />}
             </div>
         </div>
     )

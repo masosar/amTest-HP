@@ -1,122 +1,217 @@
+#cssmenu {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 281px;
+  height: 36px;
+  background: #6B63B5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius:  0 0 10px 10px;
+  z-index: 1000;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 1140px !important;
+  margin-top: 100px;
+}
+
+.favorites {
+  float: left;
+  display: block;
+  padding: 5px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.add {
+  position: relative;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 25px;
+
+/* or 179% */
+text-align: center;
+
+color: #FFFFFF;
+}
+
 .hero {
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hogwarts.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hogwarts.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
-  .logohp {
-    background-image: url('/images/hplogo.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 200px;
-    height: 100px;
-  }
+.logohp {
+  background-image: url('/images/hplogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+}
 
-  .card-title {
-    position: absolute;
-    width: 226px;
-    height: 46px;
-    left: 235px;
-    top: 64px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 30px;
-    color: #081F32;
-  }
+.filter {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  width: 438px;
+  height: 85px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
 
-  .card-text {
-    position: absolute;
-    height: 112px;
-    left: 235px;
-    top: 131px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 27px;
-    color: #374A59;
-  }
+#button1{
+  width: 288px;
+  height: 67px;
+  margin-right: 100px;
+  display: inline-block;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+#button2{
+  width: 288px;
+  height: 67px;
+  margin-left: 100px;
+  display: inline-block;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+#buttoncontainer{
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.card-title {
+  position: absolute;
+  width: 226px;
+  height: 46px;
+  left: 235px;
+  top: 64px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #081F32;
+}
+
+.card-text {
+  position: absolute;
+  height: 112px;
+  left: 235px;
+  top: 131px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 27px;
+  color: #374A59;
+}
 
 .card-obtuary {
-    position: static;
-    width: 33px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    color: #999999;
+  position: static;
+  width: 33px;
+  height: 19px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #999999;
 }
 
 .card-bookmark {
-    position: absolute;
-    left: 91.84%;
-    right: 4.27%;
-    top: 8.3%;
-    bottom: 83.4%;
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-}
-.myimg{
-    width:170px;
-    height:170px;
-    object-fit: cover;
-    object-position: top;
-    border-radius:50%;
-    margin: 40px 20px;
+  position: absolute;
+  left: 91.84%;
+  right: 4.27%;
+  top: 8.3%;
+  bottom: 83.4%;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
 }
 
-.container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1140px !important;
-    margin-top: 100px;
+.myimg {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin: 40px 20px;
 }
+
+
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
 .card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
-    max-width: 540px;
-    position: relative;
-    width: 515px;
-    height: 265px + 2px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 16px;
-    /* Main Shadow */
-    filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.04));
-    margin-bottom: 35px;
-  }
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 540px;
+  position: relative;
+  width: 515px;
+  height: 265px + 2px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 16px;
+  /* Main Shadow */
+  filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.04));
+  margin-bottom: 35px;
+}
 
 .icon-background {
-    position: absolute;
-    width: 210px;
-    height: 265px;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
+  position: absolute;
+  width: 210px;
+  height: 265px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
 
-    background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
-    border-radius: 16px 0px 0px 16px;
+  background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+  border-radius: 16px 0px 0px 16px;
 }
 
 .card-body {
-    margin-left: 210px;
+  margin-left: 210px;
 }
