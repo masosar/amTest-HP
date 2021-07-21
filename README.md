@@ -42,7 +42,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 When first fetching the db.json file, there was an error: \
 ### TypeError: Cannot read property 'map' of null
 The students list is passed as a prop to the map function in StudentsList component and when trying to map it, the little fraction of time it takes to get the data it causes to still show the initialState of 'students' state, which is null. So to avoid this I used a form of "Conditional Templating" like this:
-'''
+```
 {students && <StudentsList students = {students} />}
-'''
+```
 This way the second part after the '&&' will evaluate only if the first part (students) is true. :+1:

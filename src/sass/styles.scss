@@ -1,31 +1,122 @@
 .hero {
     background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hogwarts.jpg');
-    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
+  }
 
+  .logohp {
+    background-image: url('/images/hplogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+    height: 100px;
   }
 
   .card-title {
-    font-family: Open Sans;
+    position: absolute;
+    width: 226px;
+    height: 46px;
+    left: 235px;
+    top: 64px;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
-    line-height: 46px;
-    
-    /* identical to box height, or 153% */
-    
-    /* Heading text */
+    line-height: 30px;
     color: #081F32;
   }
 
+  .card-text {
+    position: absolute;
+    height: 112px;
+    left: 235px;
+    top: 131px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    color: #374A59;
+  }
+
+.card-obtuary {
+    position: static;
+    width: 33px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #999999;
+}
+
+.card-bookmark {
+    position: absolute;
+    left: 91.84%;
+    right: 4.27%;
+    top: 8.3%;
+    bottom: 83.4%;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
 .myimg{
-    
     width:170px;
     height:170px;
-    object-fit:cover;
-    border-radius:50%;}
+    object-fit: cover;
+    object-position: top;
+    border-radius:50%;
+    margin: 40px 20px;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px !important;
+    margin-top: 100px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 540px;
+    position: relative;
+    width: 515px;
+    height: 265px + 2px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 16px;
+    /* Main Shadow */
+    filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.04));
+    margin-bottom: 35px;
+  }
+
+.icon-background {
+    position: absolute;
+    width: 210px;
+    height: 265px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+    border-radius: 16px 0px 0px 16px;
+}
+
+.card-body {
+    margin-left: 210px;
+}

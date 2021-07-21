@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import '../sass/styles.scss';
 import StudentsList from './StudentsList';
 import useFetch from './useFetch';

@@ -2,24 +2,33 @@ import React from "react";
 
 const StudentsList = ({ students }) => {
   return (
-    <div className="main-container">
-      {students.map((student, index) => (
-        <div className="card" key={index}>
-            <div className="card-body">
-                <div className="">
-                    <img className="myimg" src={student.image} alt="" />
-                </div>
-                <h2 className="card-title">{student.name}</h2>
-                <p className="card-birthday">Cumpleaños: {student.dateOfBirth}</p>
-                <p className="card-gender">Género: {student.gender}</p>
-                <p className="card-eyecolor">Color de ojos: {student.eyeColour}</p>
-                <p className="card-haircolor">Color de pelo: {student.hairColour}</p>
+    <div className="container">
+      <div className="logohp"></div>
+      <div className="row row-cols-2 row-cols-lg-2">
+        {students.map((student, index) => (
+          <div className="col mb-6">
+            <div className="card-horizontal">
+              <div className="icon-background">
+                <img src={student.image} className="myimg" alt={student.name} />
+              </div>
+              <div className="card-body">
+                <span className="card-obituary">VIVO / ESTUDIANTE</span>
+                <span className="card-bookmark"></span>
+                <h5 className="card-title">{student.name}</h5>
+                <span className="card-text">
+                  <span>Cumpleaños: {student.dateOfBirth}</span>
+                  <br />
+                  <span>Género: {student.gender}</span>
+                  <br />
+                  <span>Color de ojos: {student.eyeColour}</span>
+                  <br />
+                  <span>Color de pelo: {student.hairColour}</span>
+                </span>
+              </div>
             </div>
-        </div>
-      ))}
-
-
-      
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
