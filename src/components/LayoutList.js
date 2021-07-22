@@ -26,12 +26,12 @@ const LayoutList = ({ characters }) => {
       <div className="row row-cols-2 row-cols-lg-2">
         {characters.map((character, index) => (
           <div className="col mb-6">
-            <div className="card-horizontal">
+            <div className="card-horizontal" key={index}>
               <div className="icon-background">
                 <img src={character.image} className="myimg" alt={character.name} />
               </div>
-              <div className="card-body">
-                <span className="card-obituary">VIVO / ESTUDIANTE</span>
+              <div className="card-body" style={character.alive ? {backgroundColor:'#fff'}: { backgroundColor:'#ccc', borderRadius: '0px 16px 16px 0px' }}>
+                <span className="card-obituary">{character.alive ? 'VIVO' : 'FINADO'} / {character.hogwartsStudent ? 'ESTUDIANTE' : character.hogwartsStaff ? 'STAFF' : ''}</span>
                 <span className="card-bookmark"></span>
                 <h5 className="card-title">{character.name}</h5>
                 <span className="card-text">

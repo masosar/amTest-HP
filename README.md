@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Concurrently, it will open the json-server mocked API in [http://localhost:3030](http://localhost:3030)
+Opens [http://localhost:3000](http://localhost:3000) in the browser. Concurrently, it launches json-server's mocked API in [http://localhost:3030](http://localhost:3030).
 
 ## JSON files provided
 
