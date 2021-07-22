@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UrlContext } from "../UrlContext";
-
-
+import HouseBg from "./HouseBg";
+import StyledComponents from "./StyledComponents";
 
 
 const LayoutList = ({ characters }) => {
@@ -27,7 +27,20 @@ const LayoutList = ({ characters }) => {
         {characters.map((character, index) => (
           <div className="col mb-6">
             <div className="card-horizontal" key={index}>
-              <div className="icon-background">
+              <div 
+                className="icon-background" 
+                style={
+                  character.house ==='Gryffindor' 
+                  ? {background: 'linear-gradient(135deg, #FF0000 0%, #FED482 100%)', borderRadius: '16px 0px 0px 16px'} 
+                  : character.house ==='Slytherin' 
+                  ? {background: 'linear-gradient(135deg, #1C792B 0%, #82E95E 100%)', borderRadius: '16px 0px 0px 16px'} 
+                  : character.house ==='Hufflepuff' 
+                  ? {background: 'linear-gradient(135deg, #FFC700 0%, #FFF388 100%)', borderRadius: '16px 0px 0px 16px'} 
+                  :character.house ==='Ravenclaw' 
+                  ? {background: 'linear-gradient(135deg, #0597B7 0%, #66D1FF 100%)', borderRadius: '16px 0px 0px 16px'} 
+                  :{backgroundColor:'#ccc'}
+                }
+              >
                 <img src={character.image} className="myimg" alt={character.name} />
               </div>
               <div className="card-body" style={character.alive ? {backgroundColor:'#fff'}: { backgroundColor:'#ccc', borderRadius: '0px 16px 16px 0px' }}>
