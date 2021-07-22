@@ -3,8 +3,7 @@
   overflow: hidden;
   top: 0;
   margin: auto;
-  left: 0;
-  right: 0;
+  right: 17%;
   width: 281px;
   height: 36px;
   background: #6B63B5;
@@ -24,6 +23,7 @@
 
 .favorites {
   float: left;
+  margin-left: 20px;
   display: block;
   padding: 5px;
   font-family: 'Open Sans';
@@ -36,7 +36,10 @@
 }
 
 .add {
-  position: relative;
+  float: right;
+  margin-right: 20px;
+  display: block;
+  padding: 5px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
@@ -44,6 +47,7 @@
   line-height: 25px;
   text-align: center;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .hero {

@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import { UrlContext } from "../UrlContext";
-import HouseBg from "./HouseBg";
-import StyledComponents from "./StyledComponents";
-
 
 const LayoutList = ({ characters }) => {
   const url = useContext(UrlContext);
