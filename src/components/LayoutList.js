@@ -6,9 +6,9 @@ const LayoutList = ({ characters }) => {
 
   const filterBy = (num) => {
     if(num===1){
-      url.setTheUrl("http://localhost:3030/hp-students")
+      url.setTheUrl("/hp-students")
     }else if(num===2){
-      url.setTheUrl("http://localhost:3030/hp-staff")
+      url.setTheUrl(" /hp-staff")
     }
   }
 
