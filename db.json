@@ -574,10 +574,77 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "name": "Joy Baritugo",
+      "gender": "",
+      "dateOfBirth": "17-02-1981",
+      "eyeColour": "Dark brown",
+      "hairColour": "Black",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "https://www.hoytamaulipas.net/fotoscartones/781.jpg",
+      "id": 26
+    },
+    {
+      "name": "gjgjhjgh",
+      "gender": "",
+      "dateOfBirth": "ghjghjghj",
+      "eyeColour": "gjghjghjgh",
+      "hairColour": "ghjghjgh",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "ghjghjghjghjgh",
+      "id": 27
+    },
+    {
+      "name": "asdfasf",
+      "gender": "",
+      "dateOfBirth": "asfasf",
+      "eyeColour": "asfadsf",
+      "hairColour": "asfasf",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "asfdsafasf",
+      "id": 28
+    },
+    {
+      "name": "asfasdfa",
+      "gender": "",
+      "dateOfBirth": "asfdasdf",
+      "eyeColour": "sdfafsd",
+      "hairColour": "asfasf",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "sadfaf",
+      "id": 29
+    },
+    {
+      "name": "fffff",
+      "gender": "",
+      "dateOfBirth": "ffff",
+      "eyeColour": "fffff",
+      "hairColour": "fffff",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "ffffff",
+      "id": 30
+    },
+    {
+      "name": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "eyeColour": "",
+      "hairColour": "",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": 0,
+      "image": "",
+      "id": 31
     }
   ],
   "hp-gryffindor": [
     {
+      "id": 1,
       "name": "Harry Potter",
       "species": "human",
       "gender": "male",
@@ -600,6 +667,7 @@
       "image": "http://hp-api.herokuapp.com/images/harry.jpg"
     },
     {
+      "id": 2,
       "name": "Hermione Granger",
       "species": "human",
       "gender": "female",
@@ -622,6 +690,7 @@
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg"
     },
     {
+      "id": 3,
       "name": "Ron Weasley",
       "species": "human",
       "gender": "male",
@@ -644,6 +713,7 @@
       "image": "http://hp-api.herokuapp.com/images/ron.jpg"
     },
     {
+      "id": 4,
       "name": "Minerva McGonagall",
       "species": "human",
       "gender": "female",
@@ -666,6 +736,7 @@
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
     },
     {
+      "id": 5,
       "name": "Rubeus Hagrid",
       "species": "half-giant",
       "gender": "male",
@@ -688,6 +759,7 @@
       "image": "http://hp-api.herokuapp.com/images/hagrid.png"
     },
     {
+      "id": 6,
       "name": "Neville Longbottom",
       "species": "human",
       "gender": "male",
@@ -710,6 +782,7 @@
       "image": "http://hp-api.herokuapp.com/images/neville.jpg"
     },
     {
+      "id": 7,
       "name": "Ginny Weasley",
       "species": "human",
       "gender": "female",
@@ -732,6 +805,7 @@
       "image": "http://hp-api.herokuapp.com/images/ginny.jpg"
     },
     {
+      "id": 8,
       "name": "Sirius Black",
       "species": "human",
       "gender": "male",
@@ -754,6 +828,7 @@
       "image": "http://hp-api.herokuapp.com/images/sirius.JPG"
     },
     {
+      "id": 9,
       "name": "Remus Lupin",
       "species": "werewolf",
       "gender": "male",
@@ -776,6 +851,7 @@
       "image": "http://hp-api.herokuapp.com/images/lupin.jpg"
     },
     {
+      "id": 10,
       "name": "Arthur Weasley",
       "species": "human",
       "gender": "male",
@@ -800,6 +876,7 @@
   ],
   "hp-staff": [
     {
+      "id": 11,
       "name": "Minerva McGonagall",
       "species": "human",
       "gender": "female",
@@ -822,6 +899,7 @@
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
     },
     {
+      "id": 12,
       "name": "Severus Snape",
       "species": "human",
       "gender": "male",
@@ -844,6 +922,7 @@
       "image": "http://hp-api.herokuapp.com/images/snape.jpg"
     },
     {
+      "id": 13,
       "name": "Rubeus Hagrid",
       "species": "half-giant",
       "gender": "male",
@@ -866,6 +945,7 @@
       "image": "http://hp-api.herokuapp.com/images/hagrid.png"
     },
     {
+      "id": 14,
       "name": "Remus Lupin",
       "species": "werewolf",
       "gender": "male",
@@ -888,6 +968,7 @@
       "image": "http://hp-api.herokuapp.com/images/lupin.jpg"
     },
     {
+      "id": 15,
       "name": "Horace Slughorn",
       "species": "human",
       "gender": "male",
@@ -910,6 +991,7 @@
       "image": "http://hp-api.herokuapp.com/images/slughorn.JPG"
     },
     {
+      "id": 16,
       "name": "Dolores Umbridge",
       "species": "human",
       "gender": "female",
@@ -932,6 +1014,7 @@
       "image": "http://hp-api.herokuapp.com/images/umbridge.jpg"
     },
     {
+      "id": 17,
       "name": "Mrs Norris",
       "species": "cat",
       "gender": "female",
@@ -954,6 +1037,7 @@
       "image": "http://hp-api.herokuapp.com/images/norris.JPG"
     },
     {
+      "id": 18,
       "name": "Argus Filch",
       "species": "human",
       "gender": "male",
@@ -978,6 +1062,7 @@
   ],
   "hp-students": [
     {
+      "id": 19,
       "name": "Harry Potter",
       "species": "human",
       "gender": "male",
@@ -1000,6 +1085,7 @@
       "image": "http://hp-api.herokuapp.com/images/harry.jpg"
     },
     {
+      "id": 20,
       "name": "Hermione Granger",
       "species": "human",
       "gender": "female",
@@ -1022,6 +1108,7 @@
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg"
     },
     {
+      "id": 21,
       "name": "Ron Weasley",
       "species": "human",
       "gender": "male",
@@ -1044,6 +1131,7 @@
       "image": "http://hp-api.herokuapp.com/images/ron.jpg"
     },
     {
+      "id": 22,
       "name": "Draco Malfoy",
       "species": "human",
       "gender": "male",
@@ -1066,6 +1154,7 @@
       "image": "http://hp-api.herokuapp.com/images/draco.jpg"
     },
     {
+      "id": 23,
       "name": "Cedric Diggory",
       "species": "human",
       "gender": "male",
@@ -1088,6 +1177,7 @@
       "image": "http://hp-api.herokuapp.com/images/cedric.png"
     },
     {
+      "id": 24,
       "name": "Cho Chang",
       "species": "human",
       "gender": "female",
@@ -1110,6 +1200,7 @@
       "image": "http://hp-api.herokuapp.com/images/cho.jpg"
     },
     {
+      "id": 25,
       "name": "Neville Longbottom",
       "species": "human",
       "gender": "male",
@@ -1132,6 +1223,7 @@
       "image": "http://hp-api.herokuapp.com/images/neville.jpg"
     },
     {
+      "id": 26,
       "name": "Luna Lovegood",
       "species": "human",
       "gender": "female",
@@ -1154,6 +1246,7 @@
       "image": "http://hp-api.herokuapp.com/images/luna.jpg"
     },
     {
+      "id": 27,
       "name": "Ginny Weasley",
       "species": "human",
       "gender": "female",
@@ -1176,6 +1269,7 @@
       "image": "http://hp-api.herokuapp.com/images/ginny.jpg"
     },
     {
+      "id": 28,
       "name": "Vincent Crabbe",
       "species": "human",
       "gender": "male",
@@ -1198,6 +1292,7 @@
       "image": "http://hp-api.herokuapp.com/images/crabbe.jpg"
     },
     {
+      "id": 29,
       "name": "Gregory Goyle",
       "species": "human",
       "gender": "male",

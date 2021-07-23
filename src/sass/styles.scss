@@ -12,6 +12,10 @@
   z-index: 1000;
 }
 
+.favmenu{
+  color: #000;
+}
+
 .container,
 .container-lg,
 .container-md,
@@ -191,8 +195,14 @@
   right: 4.27%;
   top: 8.3%;
   bottom: 83.4%;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  cursor: pointer;
+}
+
+.fa-bookmark {
+  color: rgb(185, 180, 180);
+}
+.fa-bookmark:hover {
+  color: rgb(5, 37, 16);
 }
 
 .myimg {

@@ -8,8 +8,12 @@ const LayoutList = ({ characters }) => {
     if(num===1){
       url.setTheUrl("/hp-students")
     }else if(num===2){
-      url.setTheUrl(" /hp-staff")
+      url.setTheUrl("/hp-staff")
     }
+  }
+
+  const onBookmark = () => {
+    console.log('You chose a bookmark')
   }
 
   return (
@@ -42,7 +46,7 @@ const LayoutList = ({ characters }) => {
               </div>
               <div className="card-body" style={character.alive ? {backgroundColor:'#fff'}: { backgroundColor:'#ccc', borderRadius: '0px 16px 16px 0px' }}>
                 <span className="card-obituary">{character.alive ? 'VIVO' : 'FINADO'} / {character.hogwartsStudent ? 'ESTUDIANTE' : character.hogwartsStaff ? 'STAFF' : ''}</span>
-                <span className="card-bookmark"></span>
+                <span className="card-bookmark" onClick={() => onBookmark() }><i className="fa fa-bookmark fa-lg" aria-hidden="true"></i></span>
                 <h5 className="card-title">{character.name}</h5>
                 <span className="card-text">
                   <span>Cumpleaños: {character.dateOfBirth}</span>

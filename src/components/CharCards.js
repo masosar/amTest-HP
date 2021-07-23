@@ -7,8 +7,10 @@ import { UrlContext } from "../UrlContext";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { connect } from 'react-redux';
 
-const CharCards = () => {
+const CharCards = (props) => {
+  //console.log(props.favorites[0].id);
   const [show, setShow] = useState(false);
 
 //   const [db, setDb] = useState([]);
@@ -22,15 +24,9 @@ const CharCards = () => {
   const [hogwartsStudent, sethogwartsStudent] = useState(0);
   const [hogwartsStaff, sethogwartsStaff] = useState(0);
   const [image, setimage] = useState('');
-  
-
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-//   const createData = (data) =>{
-//       setDb()
-//   }
 
   const url = useContext(UrlContext);
   const { data: characters, isPending, error } = useFetch(url.theUrl);
@@ -53,8 +49,12 @@ const CharCards = () => {
               body: JSON.stringify(char)
           }).then(() => {
               console.log('New character added');
-          })
+          });
+          setShow(false);
+          url.setTheUrl('/hp-characters');
     }
+  //todo:  the page is not reloading with the new data added
+  //todo: The new records appears as "FINADO"
 
   return (
     <div>
@@ -64,6 +64,11 @@ const CharCards = () => {
           AGREGAR
         </div>
       </div>
+      <div className="favmenu">
+      {props.favorites.map((fav, index) => (
+          <p>{fav.name}</p>
+          ))}
+          </div>
       <div className="hero">
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
@@ -189,11 +194,17 @@ const CharCards = () => {
           <Button className="btn btn-secondary" variant="secondary" type="submit"  onClick={handleSubmit}>
             Guardar
           </Button>
-          
         </Modal.Footer>
       </Modal>
     </div>
   );
 };
 
-export default CharCards;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts,
+    favorites: state.favorites
+  }
+}
+
+export default connect(mapStateToProps)(CharCards);

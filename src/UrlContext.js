@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 export const UrlContext = createContext();
 
 export const UrlProvider = ({ children }) => {
-    const [theUrl, setTheUrl] = useState('http://localhost:3030/hp-characters');
+    const [theUrl, setTheUrl] = useState('/hp-characters');
     return (
         <UrlContext.Provider 
             value={{ 

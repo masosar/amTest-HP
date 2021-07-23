@@ -37,6 +37,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Given the time, things I could have done better
 
+-  Had I had more time, I would have fixed the insertion of the data to include in the 'Students' and 'Staff' endpoint and not only in the 'Characters' one. 
+
 ## Describing any Pain Point or Bug and its solution.
 
 -  When first fetching the db.json file, there was an error: \
