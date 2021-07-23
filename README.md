@@ -21,23 +21,41 @@ The files provided were compiled in a unique db.json file in the root directory.
 - http://localhost:3030/hp-students
 
 
-### `yarn build`
+### Responsiveness
+There are only one breakpoint to test in mobile and its at 500px. There are no more intermediate steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Unit testing
 
+-  Very basic Jest testing due to lack of time but it actually showed me an inconsistency with the name of my component:
+
+¸¸¸
+test('renders content', () => {
+    const endpoint = {
+       url: "/hp-characters"
+    }
+
+    const component = render(<useFetch url={endpoint} />)
+    console.log(component);
+})
+---
+ PASS  src/Note.test.js
+  ✓ renders content (67 ms)
+
+  console.error
+    Warning: <useFetch /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.
+        at useFetch
+```
+
 ## What I like the most
+
+This exercise made me learn more and faster than in the last 3 months.
 
 ## Given the time, things I could have done better
 
 -  Had I had more time, I would have fixed the insertion of the data to include in the 'Students' and 'Staff' endpoint and not only in the 'Characters' one. 
+-  Small details in the Mobile styles
+-  Mostly the Redux capabilities. This is my main regret.
 
 ## Describing any Pain Point or Bug and its solution.
 
@@ -50,3 +68,21 @@ The students list is passed as a prop to the map function in StudentsList compon
 This way the second part after the '&&' will evaluate only if the first part (students) is true. :+1:
 
 -  When trying to insert data into db.json, I thought there was a CROSS ORIGIN (CORS) error. But the actual problem was that the data had no id's, which are needed in order to let us add data. 
+
+-  The Redux functionality... Couldn't finish it. I had to learn it alongside but wasn't capable of add nor delete to the state. 
+
+---
+
+# Final words
+
+- This was a huge learning experience and I had a lot of fun and sure I'm going to improve this exercise eventually. In any case, I want to thank you for giving some time to read this notes.
+
+Best regards.
+
+---
+
+Esta fue una increíble experiencia de aprendizaje y me divertí mucho al realizarla. Seguro volvere a terminarla pronto. En cualquier caso muchas gracias por tomarse el tiempo de revisar estas notas. 
+
+Saludos cordiales
+
+Marco Antonio Sosa Rosales.
