@@ -1,19 +1,106 @@
-#cssmenu {
+@mixin cssmenu {
   position: fixed;
   overflow: hidden;
-  top: 0;
-  margin: auto;
-  right: 17%;
-  width: 281px;
-  height: 36px;
   background: #6B63B5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius:  0 0 10px 10px;
   z-index: 1000;
 }
 
-.favmenu{
+@mixin button1 {
+  color: #fff;
+  display: inline-block;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border-color: #6B63B5;
+}
+
+@mixin button2 {
+  color: #fff;
+  display: inline-block;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border-color: #6B63B5;
+}
+
+@mixin logohp {
+  background-image: url('/images/hplogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin filter {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media (min-width: 501px) {
+  #cssmenu {
+    @include cssmenu();
+    top: 0;
+    margin: auto;
+    right: 17%;
+    width: 281px;
+    height: 36px;
+    border-radius: 0 0 10px 10px;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px !important;
+    margin-top: 100px;
+  }
+  #button1 {
+    @include button1();
+    width: 288px;
+    height: 67px;
+    margin-right: 100px;
+  }
+
+  #button2 {
+    @include button2();
+    width: 288px;
+    height: 67px;
+    margin-right: 100px;
+  }
+  .logohp {
+    @include logohp();
+    background-size: 250px;
+    height: 100px;
+  }
+  .filter {
+    @include filter();
+    width: 438px;
+    height: 85px;
+    font-size: 36px;
+    line-height: 25px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  #buttoncontainer {
+    margin-bottom: 120px;
+    text-align: center;
+  }
+}
+
+
+.favmenu {
   color: #000;
+  display: none;
 }
 
 .thumb {
@@ -27,14 +114,7 @@
 
 
 
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl {
-  max-width: 1140px !important;
-  margin-top: 100px;
-}
+
 
 .favorites {
   float: left;
@@ -76,44 +156,11 @@
   justify-content: center;
 }
 
-.logohp {
-  background-image: url('/images/hplogo.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100px;
-}
 
-.filter {
-  position: static;
-  margin-left: auto;
-  margin-right: auto;
-  width: 438px;
-  height: 85px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 25px;
-  text-align: center;
-  color: #FFFFFF;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
 
-#button1{
-  width: 288px;
-  height: 67px;
-  color: #fff;
-  margin-right: 100px;
-  display: inline-block;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  border-color: #6B63B5;
-}
+
+
+
 
 #button1:hover {
   background: rgba(107, 99, 181, 0.6);
@@ -127,20 +174,7 @@
   border-color: #6B63B5;
 }
 
-#button2{
-  width: 288px;
-  height: 67px;
-  color: #fff;
-  margin-right: 100px;
-  display: inline-block;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  border-color: #6B63B5;
-}
+
 
 #button2:hover {
   background: rgba(107, 99, 181, 0.6);
@@ -154,10 +188,7 @@
   border-color: #6B63B5;
 }
 
-#buttoncontainer{
-  margin-bottom: 120px;
-  text-align: center;
-}
+
 
 .card-title {
   position: absolute;
@@ -212,6 +243,7 @@
 .fa-bookmark {
   color: rgb(185, 180, 180);
 }
+
 .fa-bookmark:hover {
   color: rgb(5, 37, 16);
 }
@@ -264,4 +296,57 @@
 
 .card-body {
   margin-left: 210px;
+}
+
+@media (max-width: 500px) {
+  #cssmenu {
+    @include cssmenu();
+    bottom: 0;
+    left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 36px;
+    border-radius: 10px 10px 0 0;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 500px !important;
+    margin-top: 20px;
+  }
+  #button1 {
+    @include button1();
+    width: 150px;
+    height: 67px;
+    margin-right: 10px;
+  }
+
+  #button2 {
+    @include button2();
+    width: 150px;
+    height: 67px;
+    margin-right: 10px;
+  }
+
+  .logohp {
+    @include logohp();
+    background-size: 120px;
+    height: 70px;
+  }
+  .filter {
+    @include filter();
+    width: 300px;
+    height: 55px;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #buttoncontainer {
+    margin-bottom: 60px;
+    text-align: center;
+  }
 }
