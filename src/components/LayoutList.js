@@ -29,22 +29,17 @@ const LayoutList = ({ characters }) => {
           <div className="col mb-6">
             <div className="card-horizontal" key={index}>
               <div 
-                className="icon-background" 
-                style={
+                className={
                   character.house ==='Gryffindor' 
-                  ? {background: 'linear-gradient(135deg, #FF0000 0%, #FED482 100%)', borderRadius: '16px 0px 0px 16px'} 
-                  : character.house ==='Slytherin' 
-                  ? {background: 'linear-gradient(135deg, #1C792B 0%, #82E95E 100%)', borderRadius: '16px 0px 0px 16px'} 
-                  : character.house ==='Hufflepuff' 
-                  ? {background: 'linear-gradient(135deg, #FFC700 0%, #FFF388 100%)', borderRadius: '16px 0px 0px 16px'} 
-                  :character.house ==='Ravenclaw' 
-                  ? {background: 'linear-gradient(135deg, #0597B7 0%, #66D1FF 100%)', borderRadius: '16px 0px 0px 16px'} 
-                  :{backgroundColor:'#ccc'}
-                }
+                  ? 'icon-backgroundGrif' : character.house ==='Slytherin' 
+                  ? 'icon-backgroundSlyt' : character.house ==='Hufflepuff' 
+                  ? 'icon-backgroundHuff' : character.house ==='Ravenclaw' 
+                  ? 'icon-backgroundRave' : 'noclass'
+                } 
               >
                 <img src={character.image} className="myimg" alt={character.name} />
               </div>
-              <div className="card-body" style={character.alive ? {backgroundColor:'#fff'}: { backgroundColor:'#ccc', borderRadius: '0px 16px 16px 0px' }}>
+              <div className={character.alive ? 'card-body' : 'card-body-rip'}>
                 <span className="card-obituary">{character.alive ? 'VIVO' : 'FINADO'} / {character.hogwartsStudent ? 'ESTUDIANTE' : character.hogwartsStaff ? 'STAFF' : ''}</span>
                 <span className="card-bookmark" onClick={() => onBookmark() }><i className="fa fa-bookmark fa-lg" aria-hidden="true"></i></span>
                 <h5 className="card-title">{character.name}</h5>
