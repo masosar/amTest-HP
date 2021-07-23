@@ -66,9 +66,11 @@ const CharCards = (props) => {
       </div>
       <div className="favmenu">
       {props.favorites.map((fav, index) => (
-          <p>{fav.name}</p>
-          ))}
+        <div>
+          <div><img className="thumb" src={fav.thumbnail} alt={fav.name} /></div><div className="favname">{fav.name}</div><div className="favtrash"><i className="fa fa-trash" aria-hidden="true"></i></div>
           </div>
+          ))}
+        </div>
       <div className="hero">
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
