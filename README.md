@@ -29,7 +29,7 @@ There are only one breakpoint to test in mobile and its at 500px. There are no m
 
 -  Very basic Jest testing due to lack of time but it actually showed me an inconsistency with the name of my component:
 
-¸¸¸
+```
 test('renders content', () => {
     const endpoint = {
        url: "/hp-characters"
@@ -38,13 +38,15 @@ test('renders content', () => {
     const component = render(<useFetch url={endpoint} />)
     console.log(component);
 })
+```
 ---
+```
  PASS  src/Note.test.js
   ✓ renders content (67 ms)
 
   console.error
     Warning: <useFetch /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.
-        at useFetch
+    at useFetch
 ```
 
 ## What I like the most
