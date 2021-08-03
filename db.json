@@ -585,6 +585,17 @@
       "hogwartsStaff": 0,
       "image": "",
       "id": 26
+    },
+    {
+      "name": "Mark Sosa",
+      "gender": "male",
+      "dateOfBirth": "1971-09-10",
+      "eyeColour": "Brown",
+      "hairColour": "Black",
+      "hogwartsStudent": 0,
+      "hogwartsStaff": "staff",
+      "image": "",
+      "id": 27
     }
   ],
   "hp-gryffindor": [

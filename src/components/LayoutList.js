@@ -64,7 +64,7 @@ const LayoutList = ({ characters }) => {
                   className="card-bookmark"
                   onClick={() => addFavorite(character.name)}
                 >
-                  <i className="fa fa-bookmark fa-lg" aria-hidden="true"></i>
+                  <i className="fa fa-bookmark fa-lg cardfav" aria-hidden="true"></i>
                 </span>
                 <h5 className="card-title">{character.name}</h5>
                 <span className="card-text">

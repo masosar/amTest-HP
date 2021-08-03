@@ -320,11 +320,6 @@
 }
 
 
-
-
-
-
-
 #button1:hover {
   background: rgba(107, 99, 181, 0.6);
   border-radius: 4px;
@@ -356,15 +351,26 @@
 
 
 
-.fa-bookmark {
-  color: rgb(185, 180, 180);
+// .fa-bookmark {
+//   color: rgb(185, 180, 180);
+// }
+
+// .fa-bookmark:hover {
+//   color: rgb(5, 37, 16);
+// }
+
+.cardfav{
+  color: #ccc;
 }
 
-.fa-bookmark:hover {
-  color: rgb(5, 37, 16);
+.cardfav:hover{
+  color: green;
 }
 
-
+.fa-trash{
+  float: right;
+  margin-right: 30px;
+}
 
 
 

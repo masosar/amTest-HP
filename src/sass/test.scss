@@ -16,6 +16,11 @@ $open-sans: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
+
+
+
+
+
 body, html {
   height: 100%;
   background-color: $background-purple;
@@ -27,8 +32,50 @@ body, html {
   height: 100%;
 }
 
+.rowfav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: 'Open Sans';
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+line-height: 25px;
+text-align: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
+.blue-column {
+  height: 36px;
+}
+
+.green-column {
+  margin-top: 5px;
+    height: 36px;
+    cursor: pointer;
+}
+
 // tutorial start
 .tutorial {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-basis: 100%;
+  flex: 1;
   width: 80%;
   margin: 5px auto 0 5px;
   box-shadow: 0 4px 12px rgba(black, 0.1);
@@ -96,9 +143,9 @@ body, html {
         ul {
           display: block;
           //margin-top: 15px;
-          
-          width: 200px;
-          left: 0;
+         //Hero goes  bottom:100%;
+          width: 280px;
+          left: -36px;
           
           position: absolute;
           
@@ -107,6 +154,7 @@ body, html {
             display: block;
             background-color: #6B63B5;
             padding: 8px;
+            text-align: left;
             span {
               float: right;
               color: $subtle-white;
@@ -127,5 +175,12 @@ body, html {
         }
       } 
     }
+  }
+}
+
+@media (max-width: 500px) {
+  ul {
+    display: block;
+   bottom:100%;
   }
 }
