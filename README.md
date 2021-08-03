@@ -57,7 +57,7 @@ This exercise made me learn more and faster than in the last 3 months.
 
 -  Had I had more time, I would have fixed the insertion of the data to include in the 'Students' and 'Staff' endpoint and not only in the 'Characters' one. 
 -  Small details in the Mobile styles
--  Mostly the Redux capabilities. This is my main regret.
+-  Mostly the Redux capabilities. This is my main regret. -- UPDATE -- Since the official delivery of the app, I kept working on it and now is functioning the Redux store to add favorites using a slice method in the action in order to only have a maximum of 5 items. 
 
 ## Describing any Pain Point or Bug and its solution.
 
