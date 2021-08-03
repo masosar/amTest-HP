@@ -76,7 +76,7 @@ const CharCards = () => {
           <div className="tutorial">
           <ul>
             <li>
-              Favoritos <i className="fa fa-bookmark lg"></i>
+              Favoritos <i className="fa fa-bookmark fa-lg"></i>
               <ul>
                 {favs.map((fav) => (
                   <li>
@@ -88,7 +88,7 @@ const CharCards = () => {
           </ul>
         </div>
           <div class="column">
-            <div class="green-column" onClick={handleShow}>Agregar <i className="fa fa-user-plus"></i></div>
+            <div class="green-column" onClick={handleShow}>Agregar <i className="fa fa-user-plus fa-lg"></i></div>
           </div>
         </div>
         {/* <div className="add" onClick={handleShow}>

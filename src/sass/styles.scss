@@ -82,6 +82,48 @@
   color: #081F32;
 }
 
+
+#buttoncontainer {
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 120px;
+  text-align: center;
+}
+.buttonrow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.buttoncolumn{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.switchrow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.switch{
+  margin-bottom: 10px;
+  color: #fff;
+  align-items: center;
+}
+
+
+
+
+
 @media (min-width: 501px) {
   #cssmenu {
     @include cssmenu();
@@ -102,20 +144,6 @@
     margin-top: 100px;
   }
 
-  #button1 {
-    @include button1();
-    width: 288px;
-    height: 67px;
-    margin-right: 100px;
-  }
-
-  #button2 {
-    @include button2();
-    width: 288px;
-    height: 67px;
-    margin-right: 100px;
-  }
-
   .logohp {
     @include logohp();
     background-size: 250px;
@@ -132,10 +160,20 @@
     margin-bottom: 10px;
   }
 
-  #buttoncontainer {
-    margin-bottom: 120px;
-    text-align: center;
+
+
+  #button1 {
+    @include button1();
+    width: 288px;
+    height: 67px;
   }
+
+  #button2 {
+    @include button2();
+    width: 288px;
+    height: 67px;
+  }
+
 
   .myimg {
     @include myimg();
