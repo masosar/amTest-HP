@@ -576,61 +576,6 @@
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
     },
     {
-      "name": "Joy Baritugo",
-      "gender": "",
-      "dateOfBirth": "17-02-1981",
-      "eyeColour": "Dark brown",
-      "hairColour": "Black",
-      "hogwartsStudent": 0,
-      "hogwartsStaff": 0,
-      "image": "https://www.hoytamaulipas.net/fotoscartones/781.jpg",
-      "id": 26
-    },
-    {
-      "name": "gjgjhjgh",
-      "gender": "",
-      "dateOfBirth": "ghjghjghj",
-      "eyeColour": "gjghjghjgh",
-      "hairColour": "ghjghjgh",
-      "hogwartsStudent": 0,
-      "hogwartsStaff": 0,
-      "image": "ghjghjghjghjgh",
-      "id": 27
-    },
-    {
-      "name": "asdfasf",
-      "gender": "",
-      "dateOfBirth": "asfasf",
-      "eyeColour": "asfadsf",
-      "hairColour": "asfasf",
-      "hogwartsStudent": 0,
-      "hogwartsStaff": 0,
-      "image": "asfdsafasf",
-      "id": 28
-    },
-    {
-      "name": "asfasdfa",
-      "gender": "",
-      "dateOfBirth": "asfdasdf",
-      "eyeColour": "sdfafsd",
-      "hairColour": "asfasf",
-      "hogwartsStudent": 0,
-      "hogwartsStaff": 0,
-      "image": "sadfaf",
-      "id": 29
-    },
-    {
-      "name": "fffff",
-      "gender": "",
-      "dateOfBirth": "ffff",
-      "eyeColour": "fffff",
-      "hairColour": "fffff",
-      "hogwartsStudent": 0,
-      "hogwartsStaff": 0,
-      "image": "ffffff",
-      "id": 30
-    },
-    {
       "name": "",
       "gender": "",
       "dateOfBirth": "",
@@ -639,7 +584,7 @@
       "hogwartsStudent": 0,
       "hogwartsStaff": 0,
       "image": "",
-      "id": 31
+      "id": 26
     }
   ],
   "hp-gryffindor": [

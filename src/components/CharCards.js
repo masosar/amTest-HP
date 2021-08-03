@@ -1,79 +1,80 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "../sass/styles.scss";
-//import DdFavorites from './DdFavorites';
+import "../sass/test.scss";
+import { useSelector } from "react-redux";
 import LayoutList from "./LayoutList";
 import useFetch from "./useFetch";
-import { UrlContext } from "../UrlContext";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { connect } from 'react-redux';
 
-const CharCards = (props) => {
-  //console.log(props.favorites[0].id);
+const CharCards = () => {
   const [show, setShow] = useState(false);
 
-//   const [db, setDb] = useState([]);
-
-  //states to control inputs (experimenting)
-  const [name, setname] = useState('');
-  const [gender, setgender] = useState('');
-  const [dateOfBirth, setdateOfBirth] = useState('');
-  const [eyeColour, seteyeColour] = useState('');
-  const [hairColour, sethairColour] = useState('');
+  const [name, setname] = useState("");
+  const [gender, setgender] = useState("");
+  const [dateOfBirth, setdateOfBirth] = useState("");
+  const [eyeColour, seteyeColour] = useState("");
+  const [hairColour, sethairColour] = useState("");
   const [hogwartsStudent, sethogwartsStudent] = useState(0);
   const [hogwartsStaff, sethogwartsStaff] = useState(0);
-  const [image, setimage] = useState('');
+  const [image, setimage] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const url = useContext(UrlContext);
-  const { data: characters, isPending, error } = useFetch(url.theUrl);
+  const category = useSelector((state) => state.category);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const char = {
-            name,
-            gender,
-            dateOfBirth,
-            eyeColour,
-            hairColour,
-            hogwartsStudent,
-            hogwartsStaff,
-            image,
-          };
-          fetch('/hp-characters', {
-              method: 'POST',
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(char)
-          }).then(() => {
-              console.log('New character added');
-          });
-          setShow(false);
-          url.setTheUrl('/hp-characters');
-    }
-  //todo:  the page is not reloading with the new data added
-  //todo: The new records appears as "FINADO"
+  const url = category;
+  const { data: characters, isPending, error } = useFetch(url);
+
+  const favs = useSelector((state) => state.favorites);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const char = {
+      name,
+      gender,
+      dateOfBirth,
+      eyeColour,
+      hairColour,
+      hogwartsStudent,
+      hogwartsStaff,
+      image,
+    };
+    fetch("/hp-characters", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(char),
+    }).then(() => {
+      console.log("New character added");
+    });
+    setShow(false);
+  };
 
   return (
     <div>
-      <div id="cssmenu">
-        <div className="favorites">FAVORITOS</div>
+      <div id="cssmenu" className="container">
+        <div className="tutorial">
+          <ul>
+            <li>
+              FAVORITOS <i className="fa fa-angle-down"></i>
+              <ul>
+                {favs.map((fav) => (
+                  <li>
+                    {fav} <i className="fa fa-trash"></i>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
+        </div>
         <div className="add" onClick={handleShow}>
           AGREGAR
         </div>
       </div>
-      <div className="favmenu">
-      {props.favorites.map((fav, index) => (
-        <div>
-          <div><img className="thumb" src={fav.thumbnail} alt={fav.name} /></div><div className="favname">{fav.name}</div><div className="favtrash"><i className="fa fa-trash" aria-hidden="true"></i></div>
-          </div>
-          ))}
-        </div>
+      <div className="favmenu"></div>
       <div className="hero">
-        {error && <div>{error}</div>}
-        {isPending && <div>Loading...</div>}
         {characters && <LayoutList characters={characters} />}
       </div>
       <Modal show={show} onHide={handleClose}>
@@ -133,8 +134,7 @@ const CharCards = (props) => {
                 type="radio"
                 name="gender"
                 id="inlineRadio1"
-                value={gender}
-                // checked={setgender('female')}
+                value="female"
                 onChange={(e) => setgender(e.target.value)}
               />
               <label className="form-check-label" for="inlineRadio1">
@@ -147,7 +147,7 @@ const CharCards = (props) => {
                 type="radio"
                 name="gender"
                 id="inlineRadio2"
-                value={gender}
+                value="male"
                 onChange={(e) => setgender(e.target.value)}
               />
               <label className="form-check-label" for="inlineRadio2">
@@ -161,6 +161,7 @@ const CharCards = (props) => {
                 name="status"
                 id="inlineRadio3"
                 value="student"
+                onChange={(e) => sethogwartsStudent(e.target.value)}
               />
               <label className="form-check-label" for="inlineRadio3">
                 Estudiante
@@ -173,6 +174,7 @@ const CharCards = (props) => {
                 name="status"
                 id="inlineRadio4"
                 value="staff"
+                onChange={(e) => sethogwartsStaff(e.target.value)}
               />
               <label className="form-check-label" for="inlineRadio4">
                 Staff
@@ -181,19 +183,24 @@ const CharCards = (props) => {
             <br />
             <br />
             <Form.Group className="mb-3" controlId="formGridAddress1">
-            <label for="image">Imagen (url)</label>
-                <input
-                  type="text"
-                  className="form-control form-control-lg"
-                  id="image"
-                  value={image}
-                  onChange={(e) => setimage(e.target.value)}
-                />
+              <label for="image">Imagen (url)</label>
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                id="image"
+                value={image}
+                onChange={(e) => setimage(e.target.value)}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="btn btn-secondary" variant="secondary" type="submit"  onClick={handleSubmit}>
+          <Button
+            className="btn btn-secondary"
+            variant="secondary"
+            type="submit"
+            onClick={handleSubmit}
+          >
             Guardar
           </Button>
         </Modal.Footer>
@@ -202,11 +209,4 @@ const CharCards = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts,
-    favorites: state.favorites
-  }
-}
-
-export default connect(mapStateToProps)(CharCards);
+export default CharCards;
