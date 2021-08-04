@@ -34,3 +34,14 @@ export const urlStaff = (text) => {
         });
     }
 }
+
+export const filterUrl = (text) => {
+    return (dispatch) => {
+        dispatch({
+            type: "on",
+            payload: text
+        });
+    }
+}
+
+

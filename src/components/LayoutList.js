@@ -6,19 +6,19 @@ import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 const LayoutList = ({ characters }) => {
   const [isOff, setIsOff] = useState(false);
-  //state with the data
-  const [source, setSource] = useState(characters);
-
-  
   const dispatch = useDispatch();
-  const { addFavorite, removeFavorite, urlStudent, urlStaff } =
-  bindActionCreators(actionCreators, dispatch);
-  
+  const { addFavorite, removeFavorite, urlStudent, urlStaff, filterUrl } =
+    bindActionCreators(actionCreators, dispatch);
+
   const handleVivosToggle = () => {
     if (isOff === false) {
-      setSource(characters.filter((aliveones) => aliveones.alive === true));
+      filterUrl("on");
+      // setIsOff(false);
+      console.log("on");
     } else {
-      setSource(characters);
+      filterUrl("off");
+      // setIsOff(true);
+      console.log("off");
     }
     setIsOff(!isOff);
   };
@@ -65,7 +65,7 @@ const LayoutList = ({ characters }) => {
         </div>
       </div>
       <div className="row row-cols-2 row-cols-lg-2">
-        {source.map((character, index) => (
+        {characters.map((character, index) => (
           <div className="col mb-6">
             <div className="card-horizontal" key={index}>
               <div

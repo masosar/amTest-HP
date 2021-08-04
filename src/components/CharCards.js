@@ -55,24 +55,7 @@ const CharCards = () => {
   return (
     <div>
       <div id="cssmenu" className="container">
-        {/* <div className="tutorial">
-          <ul>
-            <li>
-              FAVORITOS <i className="fa fa-angle-down"></i>
-              <ul>
-                {favs.map((fav) => (
-                  <li>
-                    {fav} <i className="fa fa-trash"></i>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-        </div> */}
         <div class="rowfav">
-          {/* <div class="column">
-            <div class="blue-column">Favorites <i className="fa fa-bookmark"></i></div>
-          </div> */}
           <div className="tutorial">
           <ul>
             <li>
@@ -91,9 +74,6 @@ const CharCards = () => {
             <div class="green-column" onClick={handleShow}>Agregar <i className="fa fa-user-plus fa-lg"></i></div>
           </div>
         </div>
-        {/* <div className="add" onClick={handleShow}>
-          AGREGAR
-        </div> */}
       </div>
       <div className="favmenu"></div>
       <div className="hero">
